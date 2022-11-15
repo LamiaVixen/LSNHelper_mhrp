@@ -6,10 +6,12 @@ script_version('4.3')
 
 require 'lib.moonloader'
 
+function send(result) sampAddChatMessage('LSN-Helper В» '.. result, 0xEEDC82) end
+
 function main()
 	while not isSampAvailable() do wait(0) end
 
-	send('Скрипт успешно загружено. Версия: '..thisScript().version..'. Команда: /lsn_menu')
+	send('Г‘ГЄГ°ГЁГЇГІ ГіГ±ГЇГҐГёГ­Г® Г§Г ГЈГ°ГіГ¦ГҐГ­Г®. Г‚ГҐГ°Г±ГЁГї: '..thisScript().version..'. ГЉГ®Г¬Г Г­Г¤Г : /lsn_menu')
 	print(); print('Script LSN-Helper '..thisScript().version..' loaded - Discord: kyrtion#7310')
 
 	thisScript():unload()
@@ -18,7 +20,7 @@ end
 function onScriptTerminate(s, q)
 	if s == thisScript() then
 		if not lockFailed then
-			send('Что-то пошло не так с скриптом... Отключаем, чтобы перезагрузить нажми CTRL + R')
+			send('Г—ГІГ®-ГІГ® ГЇГ®ГёГ«Г® Г­ГҐ ГІГ ГЄ Г± Г±ГЄГ°ГЁГЇГІГ®Г¬... ГЋГІГЄГ«ГѕГ·Г ГҐГ¬, Г·ГІГ®ГЎГ» ГЇГҐГ°ГҐГ§Г ГЈГ°ГіГ§ГЁГІГј Г­Г Г¦Г¬ГЁ CTRL + R')
 		end
 		return true
 	end
